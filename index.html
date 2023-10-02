@@ -3,39 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <div id="startPage">
-        <h1>Welcome to the Quiz!</h1>
+        <h1>Create Your Quiz!</h1>
         <button id="startBtn">Start</button>
-
+        <p>First submit your questions then click start and begin your quiz!</p>
         <form id="addQuestionForm">
-            <label for="newQuestion">Write Your Question:</label>
-            <input type="text" id="newQuestion" name="newQuestion"><br>
+            <input type="text" id="newQuestion" name="newQuestion" placeholder="Write Your Question"><hr><br>
 
-            <label for="newAnswer1">Answer 1:</label><br>
-            <input type="text" id="newAnswer1" name="newAnswer1"><br>
+            <input type="text" id="newAnswer1" name="newAnswer1" placeholder="Answer 1, If correct click the circle --->">
             <input type="radio" id="correct1" name="correctAnswer" value="1">
-            <label for="correct1">Correct answer</label><br>
 
-            <label for="newAnswer2">Answer 2:</label><br>
-            <input type="text" id="newAnswer2" name="newAnswer2"><br>
+
+            <input type="text" id="newAnswer2" name="newAnswer2" placeholder="Answer 2, If correct click the circle --->">
             <input type="radio" id="correct2" name="correctAnswer" value="2">
-            <label for="correct2">Correct answer</label><br>
-        <!-- Add more answer inputs as needed -->
-            <label for="newAnswer3">Answer 3:</label><br>
-            <input type="text" id="newAnswer3" name="newAnswer3"><br>
-            <input type="radio" id="correct3" name="correctAnswer" value="3">
-            <label for="correct3">Correct answer</label><br>
-                    <!--hello-->        
-            <label for="newAnswer4">Answer 4:</label><br>
-            <input type="text" id="newAnswer4" name="newAnswer4"><br>
-            <input type="radio" id="correct4" name="correctAnswer" value="4">
-            <label for="correct4">Correct answer</label><br>
 
-            <label for="quizTime">Quiz Time (in seconds):</label><br>
-            <input type="number" id="quizTime" name="quizTime" min="1"><br>
+
+            <input type="text" id="newAnswer3" name="newAnswer3" placeholder="Answer 3, If correct click the circle --->">
+            <input type="radio" id="correct3" name="correctAnswer" value="3">
+
+            
+            <input type="text" id="newAnswer4" name="newAnswer4" placeholder="Answer 4, If correct click the circle --->">
+            <input type="radio" id="correct4" name="correctAnswer" value="4">
+
+            <label for="quizTime">Quiz Time (in seconds):</label>
+            <input type="number" id="quizTime" name="quizTime" min="1">
 
             <input type="submit" value="Submit">
           </form>
@@ -43,12 +38,11 @@
 
     <div class="container">
         <div id="timer">
-            <h3>Time left: 30s</h3>
+            <h3>Time left: 0s</h3>
         </div>
 
-
         <div id="progressBarWrapper">
-            <div id="progressBarBackground"> <!-- New line -->
+            <div id="progressBarBackground">
                 <div id="progressBar"></div>
             </div>
         </div>
@@ -80,10 +74,6 @@
     <div id="results" style="display: none;">
         <h2>Quiz Results</h2>
         <p id="score"></p>
-    </div>
-
-    <div>
-        jaded
     </div>
     
     <script src="script.js"></script>
